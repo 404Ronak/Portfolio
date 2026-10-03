@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ronak Patel — Website Builder & Writer</title>
+<meta name="description" content="Ronak Patel builds websites and writes stories: business websites, landing pages, portfolios, scripts, series development, content, ghostwriting and marketing copy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Newsreader:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#08080d;--s1:#12121a;--s2:#1b1b26;--line:#2b2b3a;--ivory:#f4efe6;--ivory2:#e6dfd0;--mute:#9391a0;--gold:#d4af6a;--gold2:#8a6a2f;--plum:#3a1f4d;--sans:'Bricolage Grotesque',system-ui,sans-serif;--serif:'Newsreader',Georgia,serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:90px}
+body{margin:0;min-height:100%;background:var(--ink);color:var(--ivory);font:400 1.05rem/1.65 var(--sans);-webkit-font-smoothing:antialiased;background-image:radial-gradient(70% 50% at 85% -5%,rgba(212,175,106,.12),transparent 60%),radial-gradient(60% 50% at 0% 30%,rgba(90,40,120,.22),transparent 60%);background-attachment:fixed}
+a{color:inherit}:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1150px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-weight:800;line-height:1.02;letter-spacing:-.025em;margin:0}
+h2{font-size:clamp(2.2rem,5.5vw,4rem);max-width:16ch}h3{font-size:1.35rem;letter-spacing:-.01em}
+p{margin:0 0 1rem;max-width:60ch}.sub{color:var(--mute);margin-top:1rem}
+.gold{color:var(--gold)}.serif{font-family:var(--serif);font-style:italic;font-weight:400}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:.7rem 1.6rem;border-radius:999px;font:600 1rem var(--sans);text-decoration:none;border:1.5px solid var(--ivory);background:none;color:var(--ivory);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+.btn.p{background:linear-gradient(135deg,#ecd08f,var(--gold) 50%,#b88e44);border-color:transparent;color:#1a1305}
+.btn.p:hover{box-shadow:0 8px 30px rgba(212,175,106,.35)}.btn:hover{transform:translateY(-2px)}
+.btn.g:hover{background:var(--ivory);color:var(--ink)}
+.lnk{font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--gold);padding-bottom:2px;color:inherit;background:none;border-top:0;border-inline:0;font-family:inherit;font-size:inherit;cursor:pointer}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(8,8,13,.8);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nb{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-weight:800;letter-spacing:.08em;text-decoration:none}
+.nl{display:flex;gap:.3rem;align-items:center;list-style:none;margin:0;padding:0}
+.nl a{text-decoration:none;color:var(--mute);padding:.5rem .95rem;border-radius:999px;transition:.2s}
+.nl a:hover{color:var(--ivory)}.nl a.on{color:var(--ivory);background:var(--s2)}
+.nl a.btn{color:#1a1305;margin-left:.6rem;min-height:42px;padding:.4rem 1.2rem}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:10px;color:var(--ivory);width:48px;height:48px;font-size:1.4rem;cursor:pointer}
+@media(max-width:860px){.burger{display:block}.nl{position:absolute;left:0;right:0;top:70px;background:var(--ink);flex-direction:column;align-items:stretch;padding:.6rem 1.25rem 1.5rem;border-bottom:1px solid var(--line);display:none}.nl.o{display:flex}.nl a{padding:1rem;font-size:1.2rem}.nl a.btn{margin:.6rem 0 0}}
+/* views */
+.view{display:none;padding:clamp(3rem,7vw,6rem) 0 clamp(4rem,8vw,7rem)}
+.view.on{display:block;animation:in .5s cubic-bezier(.2,.7,.2,1)}
+@keyframes in{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.eye{color:var(--gold);font-weight:600;margin-bottom:1rem;display:block}
+/* hero */
+.hero h1{font-size:clamp(2.8rem,9vw,7.4rem);max-width:12ch;letter-spacing:-.04em}
+.hero h1 .serif{display:block;background:linear-gradient(100deg,#f3dca3,var(--gold) 60%,#a37c38);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+.hero .rest{font-size:clamp(1.15rem,2.3vw,1.7rem);color:var(--ivory2);margin-top:1.6rem;max-width:28ch;line-height:1.25}
+.cta{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:2rem}
+.split{display:grid;grid-template-columns:1fr 1fr;margin-top:clamp(2.5rem,6vw,4rem);border:1px solid var(--line);border-radius:18px;overflow:hidden;min-height:250px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.sl{background:var(--s1);padding:1.5rem}.sr{background:var(--ivory);color:var(--ink);padding:1.5rem}
+.bar{display:flex;gap:6px;margin-bottom:1rem}.bar i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.blk{height:14px;background:var(--s2);margin-bottom:10px;border-radius:4px}.blk.h{height:46px;width:60%;background:linear-gradient(135deg,#ecd08f,var(--gold2))}
+.sc{font:.85rem/1.8 'Courier New',monospace}.sc b{display:block;text-align:center;margin-top:.8rem}
+.caret{display:inline-block;width:8px;height:1em;background:var(--ink);vertical-align:-2px;animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+@media(max-width:620px){.split{grid-template-columns:1fr}}
+/* two sides */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:3.5rem}
+.side{padding:2.2rem;border-radius:18px;display:flex;flex-direction:column;gap:1rem;min-height:320px}
+.side.web{background:linear-gradient(160deg,var(--s2),var(--s1));border:1px solid var(--line)}
+.side.wr{background:linear-gradient(160deg,var(--ivory),var(--ivory2));color:var(--ink)}
+.side h3{font-size:2.2rem}.side.wr h3,.side.wr p{font-family:var(--serif);font-weight:400}.side.wr p{font-size:1.15rem}
+.side ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:.45rem}
+.side li{border:1px solid currentColor;border-radius:999px;padding:.1rem .8rem;font-size:.9rem;opacity:.8}
+.side .lnk{margin-top:auto;align-self:flex-start}
+.side.wr .lnk{border-color:var(--gold2)}
+@media(max-width:820px){.two{grid-template-columns:1fr}.side{min-height:0}}
+.band{margin-top:4rem;padding:clamp(1.8rem,5vw,3.5rem);border-radius:18px;background:linear-gradient(120deg,var(--plum),var(--s1) 70%);border:1px solid var(--line);display:flex;gap:2rem;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.band h3{font-size:clamp(1.6rem,4vw,2.6rem);max-width:20ch}
+/* cards */
+.tabs{display:flex;gap:.5rem;margin:2rem 0 0;flex-wrap:wrap}
+.tabs button{font:600 1rem var(--sans);color:var(--mute);background:none;border:1px solid var(--line);border-radius:999px;padding:.6rem 1.3rem;min-height:46px;cursor:pointer;transition:.2s}
+.tabs button.on{background:var(--ivory);color:var(--ink);border-color:var(--ivory)}
+.pane{display:none}.pane.on{display:block;animation:in .4s}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1.25rem;margin-top:2rem}
+.card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--s1);display:flex;flex-direction:column;transition:transform .25s,border-color .25s}
+.card:hover{border-color:var(--gold)}
+.ph{aspect-ratio:16/10;background:linear-gradient(135deg,var(--s2),var(--plum));display:grid;place-items:center;color:var(--mute);overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.card:hover .ph img{transform:scale(1.05)}
+.cb{padding:1.4rem;display:flex;flex-direction:column;gap:.5rem;flex:1}.cb p{color:var(--mute);margin:0}
+.cat{color:var(--gold);font-size:.85rem;font-weight:600}
+.tags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.4rem 0 .8rem}.tags span{font-size:.8rem;border:1px solid var(--line);border-radius:999px;padding:.1rem .6rem;color:var(--mute)}
+.cb .lnk{margin-top:auto;align-self:flex-start}
+.wsite{display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;align-items:center;margin-top:2rem;padding:1.5rem;border:1px solid var(--line);border-radius:18px;background:var(--s1)}
+.wsite .ph{border-radius:12px}.wsite ul{padding-left:1.1rem;color:var(--mute);margin:.5rem 0 1.2rem}
+@media(max-width:820px){.wsite{grid-template-columns:1fr}}
+.feat{margin-top:2rem;background:linear-gradient(135deg,var(--ivory),var(--ivory2));color:var(--ink);border-radius:18px;padding:clamp(1.6rem,5vw,3.5rem)}
+.feat h3{font-size:clamp(2.2rem,7vw,5rem);letter-spacing:-.04em;line-height:.92}
+.feat h3 em{display:block;font-family:var(--serif);font-weight:400;color:var(--gold2);font-size:.5em;letter-spacing:-.01em;margin-top:.5rem}
+.feat .gen{margin-top:1.4rem;color:#4a4655}
+.pills{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 1.4rem}.pills span{border:1px solid var(--ink);border-radius:999px;padding:.1rem .8rem;font-size:.9rem}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:#c8c0ad;border:1px solid #c8c0ad;margin-bottom:1.5rem;border-radius:10px;overflow:hidden}.fg div{background:var(--ivory);padding:.8rem 1rem;font-size:.92rem}
+.feat .btn{border-color:var(--ink);color:var(--ink)}.feat .btn:hover{background:var(--ink);color:var(--ivory)}
+/* accordions */
+details{border-top:1px solid var(--line);padding:1rem 0}details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;min-height:34px;font-size:1.1rem}
+summary::after{content:"+";color:var(--gold);transition:transform .25s}details[open] summary::after{transform:rotate(45deg)}
+details p{margin:.6rem 0 0;color:var(--mute)}
+.sv{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);margin-top:3rem}.sv h3{font-size:2rem;margin-bottom:.5rem}
+@media(max-width:820px){.sv{grid-template-columns:1fr}}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:3rem;counter-reset:s}
+.step{border-top:2px solid var(--gold);padding-top:1rem;counter-increment:s}
+.step h3::before{content:counter(s,decimal-leading-zero);display:block;color:var(--gold);font-size:.9rem;margin-bottom:.4rem}.step p{color:var(--mute)}
+/* about */
+.ab{display:grid;grid-template-columns:1fr 1.6fr;gap:3rem;align-items:start}
+.photo{aspect-ratio:4/5;border:1px dashed var(--mute);border-radius:18px;display:grid;place-items:center;color:var(--mute);max-width:340px;overflow:hidden}
+.sk{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3.5rem}
+.sk h3{font-size:1.1rem;color:var(--gold);margin-bottom:.8rem}.sk ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.4rem}
+.sk li{border:1px solid var(--line);border-radius:999px;padding:.15rem .8rem;font-size:.92rem;background:var(--s1)}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:3.5rem}.why p{color:var(--mute);margin:.4rem 0 0}
+@media(max-width:820px){.ab,.sk{grid-template-columns:1fr}}
+/* contact */
+.ct{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-top:2.5rem}
+.ct a{display:flex;flex-direction:column;justify-content:center;min-height:96px;padding:1.2rem 1.5rem;background:var(--s1);border:1px solid var(--line);border-radius:18px;text-decoration:none;transition:.2s}
+.ct a:hover{border-color:var(--gold);transform:translateY(-3px)}.ct small{color:var(--gold)}.ct b{font-size:1.2rem;word-break:break-all}
+#v-contact h2{font-size:clamp(2.6rem,8vw,6.5rem);max-width:11ch}
+footer{padding:2.5rem 0;border-top:1px solid var(--line);color:var(--mute);font-size:.95rem}
+.ft{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between}.ft strong{color:var(--ivory);letter-spacing:.08em}
+h2,.pt{font-size:clamp(2.2rem,5.5vw,4rem);max-width:16ch;font-weight:800;line-height:1.02;letter-spacing:-.025em;margin:0}
+h2.h3{font-size:2rem;margin-bottom:.5rem}h1,h2,h3{overflow-wrap:anywhere}
+.hs{margin-top:clamp(4rem,9vw,7rem)}.hs.two{margin-top:clamp(3rem,6vw,4.5rem)}
+.side h2{font-size:2.2rem;max-width:none}.side.wr h2{font-family:var(--serif);font-weight:400}
+.side.web{border-top:3px solid var(--gold)}.side.web li{border-radius:6px;font-family:ui-monospace,Menlo,monospace;font-size:.82rem}
+.side.wr li{font-family:var(--serif);font-style:italic;font-size:1rem}.fade{font:.8rem 'Courier New',monospace;letter-spacing:.1em;opacity:.6}
+.band h2{font-size:clamp(1.6rem,4vw,2.6rem);max-width:20ch}
+.cr{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.5rem}
+.dl{padding:1.8rem;border:1px solid var(--line);border-radius:18px;background:var(--s1)}.dl:last-child{background:linear-gradient(160deg,var(--ivory),var(--ivory2));color:var(--ink)}
+.dl h3{font-size:1.5rem;margin-bottom:1rem}.dl div{padding:.7rem 0;border-top:1px solid var(--line)}.dl:last-child div{border-color:#c8c0ad}
+.dl p{margin:.1rem 0 0;color:var(--mute);font-size:.98rem}.dl:last-child p{color:#4a4655}
+.mini{font-size:.92rem}.mini b{color:var(--ivory)}
+.wsite{grid-template-columns:1.7fr 1fr}.wsite h3{font-size:2rem;margin:.3rem 0 .8rem}.wsite .ph{aspect-ratio:16/10;border-radius:12px;border:1px solid var(--line)}
+.sample{border:1px solid var(--line);border-radius:18px;padding:1.5rem;background:var(--s1)}.sample h3{margin:.4rem 0 .5rem}
+.paper{background:var(--ivory);color:var(--ink);font:.95rem/1.8 'Courier New',monospace;padding:1.3rem;border-radius:10px;margin:1rem 0;white-space:pre-line;min-height:120px}
+.feat .cat{color:var(--gold2)}.quote{font-size:clamp(1.3rem,3vw,1.9rem);margin:1.2rem 0;color:var(--ink);max-width:none}
+.fc{display:grid;grid-template-columns:1.1fr 1fr;gap:2rem;margin:1.5rem 0}.fc h4{margin:0 0 .5rem;font-size:1rem}.fc ul{margin:0;padding-left:1.1rem}.fc p{color:#4a4655}
+.sv h2.h3{font-size:2rem}.sk h2.h3{font-size:1.1rem;color:var(--gold);margin-bottom:.8rem}.ab h2{max-width:14ch}
+@media(max-width:820px){.cr,.fc,.wsite{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nb">
+<a class="logo" href="#/home">RONAK PATEL</a>
+<button class="burger" id="bg" aria-label="Open menu" aria-expanded="false">☰</button>
+<ul class="nl" id="nl">
+<li><a href="#/home" data-v="home">Home</a></li><li><a href="#/projects" data-v="projects">Projects</a></li><li><a href="#/services" data-v="services">Services</a></li><li><a href="#/about" data-v="about">About Me</a></li><li><a href="#/contact" data-v="contact">Contact</a></li>
+<li><a class="btn p" href="#/contact">Let's Talk</a></li></ul>
+</div></nav>
+
+<main>
+<!-- HOME -->
+<section class="view hero" id="v-home"><div class="wrap">
+<span class="eye">RONAK PATEL — Website Builder + Writer</span>
+<h1>I build websites. <span class="serif">I write stories.</span></h1>
+<p class="rest">I turn ideas into digital experiences, stories, scripts, and content.</p>
+<p class="sub" style="max-width:52ch">Websites for businesses, creators, startups, and personal brands. Stories, scripts, and content built to hold attention.</p>
+<div class="cta"><a class="btn p" href="#/projects">View My Work</a><a class="btn g" href="#/contact">Let's Work Together</a></div>
+<div class="split" aria-hidden="true">
+<div class="sl"><div class="bar"><i></i><i></i><i></i></div><div class="blk h"></div><div class="blk" style="width:90%"></div><div class="blk" style="width:72%"></div><div class="blk" style="width:38%;height:34px;background:var(--ivory)"></div></div>
+<div class="sr"><div class="sc">INT. UNKNOWN PLACE — NIGHT<br>Someone is watching.<b>THE STORY BEGINS<span class="caret"></span></b></div></div></div>
+
+<div class="two hs">
+<article class="side web"><div class="bar"><i></i><i></i><i></i></div><h2>Website Building</h2><p>Complete websites built from scratch, designed to make your idea clear and easy to act on.</p>
+<ul><li>Business Websites</li><li>Landing Pages</li><li>Portfolio Websites</li><li>Personal Brand Websites</li><li>Creator Websites</li><li>Startup Websites</li><li>Website Redesigns</li></ul><a class="lnk" href="#/projects/websites">Explore Website Work →</a></article>
+<article class="side wr"><span class="fade">FADE IN:</span><h2>Writing &amp; Storytelling</h2><p>Stories, scripts, and content with structure, emotion, and pacing that holds an audience.</p>
+<ul><li>TV / Web Series</li><li>Screenwriting</li><li>Story Development</li><li>Character Development</li><li>Worldbuilding</li><li>YouTube Scripts</li><li>Ghostwriting</li><li>Marketing Copy</li><li>Hooks</li><li>Thriller / Mystery / Suspense</li></ul><a class="lnk" href="#/projects/writing">Explore Writing Work →</a></article>
+</div>
+
+<div class="hs" data-slot="create"></div>
+<div class="hs"><h2>Selected Work</h2><p class="sub">A collection of projects that show how I think, build, and create.</p><div class="grid js-selected"></div></div>
+<div class="hs" data-slot="feat" data-cta="1"></div>
+<div class="hs"><h2>How I work.</h2><div data-slot="process"></div></div>
+<div class="hs ab"><div><h2>I'm Ronak. I build things and tell stories.</h2></div><div data-slot="aboutshort"></div></div>
+<div class="hs"><h2>Why work with me.</h2><div data-slot="why"></div></div>
+<div class="hs" data-slot="band"></div>
+</div></section>
+
+<!-- PROJECTS -->
+<section class="view" id="v-projects"><div class="wrap">
+<span class="eye">Projects</span><h1 class="pt">Selected Work</h1><p class="sub">A collection of projects that show how I think, build, and create.</p>
+<div class="tabs" role="tablist"><button data-t="selected" class="on">Selected</button><button data-t="websites">Websites</button><button data-t="writing">Writing</button></div>
+<div class="pane on" id="p-selected"><div class="grid js-selected"></div></div>
+<div class="pane" id="p-websites"><h2 style="margin-top:2.5rem">Websites I've Built</h2><div id="sites"></div></div>
+<div class="pane" id="p-writing"><h2 style="margin-top:2.5rem">Stories, Scripts &amp; Ideas</h2><div data-slot="feat"></div><div class="grid" id="samples"></div></div>
+<div class="hs" data-slot="band"></div>
+</div></section>
+
+<!-- SERVICES -->
+<section class="view" id="v-services"><div class="wrap">
+<span class="eye">Services</span><h1 class="pt">What you can hire me for.</h1>
+<div class="sv">
+<div><h2 class="h3">Website services</h2><p class="sub" style="margin-top:0">A website shouldn't just exist. It should make it easier for people to understand what you do and decide to work with you.</p><div id="wsv"></div></div>
+<div><h2 class="h3">Writing services</h2><p class="sub" style="margin-top:0">Stories and words with a clear purpose, shaped for the people who'll read or watch them.</p><div id="rsv"></div></div></div>
+<div class="hs" data-slot="create"></div>
+<div class="hs"><h2>How I work.</h2><div data-slot="process"></div></div>
+<div class="hs" data-slot="band"></div>
+</div></section>
+
+<!-- ABOUT -->
+<section class="view" id="v-about"><div class="wrap">
+<div class="ab"><div class="photo" id="photo">[ADD PHOTO HERE]</div>
+<div><span class="eye">About Me</span><h1 class="pt">I'm Ronak. I build things and tell stories.</h1><br><div data-slot="about"></div></div></div>
+<div class="sk">
+<div><h2 class="h3">Web</h2><ul><li>Website Building</li><li>UI Structure</li><li>Responsive Design</li><li>Landing Pages</li><li>Portfolio Websites</li><li>Business Websites</li><li>Digital Experiences</li></ul></div>
+<div><h2 class="h3">Writing</h2><ul><li>Screenwriting</li><li>Series Development</li><li>Story Development</li><li>Character Development</li><li>Worldbuilding</li><li>Thriller</li><li>Suspense</li><li>Mystery</li><li>YouTube Scripts</li><li>Copywriting</li><li>Ghostwriting</li><li>Hooks</li></ul></div></div>
+</div></section>
+
+<!-- CONTACT -->
+<section class="view" id="v-contact"><div class="wrap">
+<span class="eye">Contact</span><h1 class="pt">Have an idea? Let's build it.</h1><br>
+<p class="sub" style="font-size:1.2rem">A website for your business. A script for your channel. A story you're developing. Tell me what you're working on.</p>
+<div class="cta"><a class="btn p" id="cta" href="#">Start a Conversation</a></div>
+<div class="ct" id="ct"></div>
+</div></section>
+</main>
+
+<footer><div class="wrap ft">
+<div><strong>RONAK PATEL</strong><br>Website Builder • Writer<br><br>© 2026 Ronak Patel. All rights reserved.</div>
+<div><a href="#/projects">Projects</a> · <a href="#/services">Services</a> · <a href="#/about">About Me</a> · <a href="#/contact">Contact</a></div>
+</div></footer>
+
+<script>
+/* ============ EDIT YOUR CONTENT HERE (everything below until "END") ============ */
+const SITE={email:"your@email.com",phone:"+91 XXXXX XXXXX",whatsapp:"" /* digits with country code, e.g. 919876543210 */,hasPhoto:false};
+const PHOTO_URL=""; // image link for the About page, then set hasPhoto:true
+
+// SELECTED WORK cards (home + Projects). img = screenshot link, url = live link or "#/projects/..." page
+const PROJECTS=[
+ {category:"WEBSITE",title:"[PROJECT NAME]",desc:"[PROJECT DESCRIPTION]",objective:"[PROJECT PURPOSE]",created:"[WHAT I CREATED]",img:"",skills:["[SKILL]","[SKILL]"],url:"[PROJECT URL]"},
+ {category:"WEBSITE",title:"[PROJECT NAME]",desc:"[PROJECT DESCRIPTION]",objective:"[PROJECT PURPOSE]",created:"[WHAT I CREATED]",img:"",skills:["[SKILL]","[SKILL]"],url:"[PROJECT URL]"},
+ {category:"STORY / SERIES",title:"The 15: Lost in Unknown",desc:"An original suspense series, developed from concept to world rules.",objective:"Build a long-form mystery with its own rules and arcs.",created:"Series concept, characters, worldbuilding, story arcs.",img:"",skills:["Series development","Worldbuilding","Suspense"],url:"#/projects/writing"}];
+
+// WEBSITES I'VE BUILT (Projects > Websites)
+const WEBSITES=[
+ {name:"[PROJECT NAME]",category:"[Business Website / Landing Page / Portfolio]",desc:"[PROJECT DESCRIPTION]",built:["Structure","Layout","Responsive experience","Visual design","Content presentation","Calls to action"],img:"",url:"[PROJECT URL]"},
+ {name:"[PROJECT NAME]",category:"[CATEGORY]",desc:"[PROJECT DESCRIPTION]",built:["Structure","Layout","Responsive experience","Visual design","Content presentation","Calls to action"],img:"",url:"[PROJECT URL]"}];
+
+// WRITING SAMPLES (Projects > Writing). Replace [ADD WRITING SAMPLE] with a real excerpt.
+const WRITING=[
+ {title:"[SAMPLE TITLE]",format:"Screenplay",genre:"Thriller",role:"Writer",excerpt:"[ADD WRITING SAMPLE]",url:"[SAMPLE URL]"},
+ {title:"[SAMPLE TITLE]",format:"[FORMAT]",genre:"[GENRE]",role:"Writer",excerpt:"[ADD WRITING SAMPLE]",url:"[SAMPLE URL]"}];
+
+// FEATURED SERIES. Add a dedicated page link in url later.
+const THE15={genres:["Suspense","Thriller","Mystery","Survival Horror","Psychological Drama","Dark Fantasy"],
+ concept:"A group of outsiders becomes trapped on a forbidden island where survival depends on understanding the rules controlling their reality.",
+ through:["Series concept","Character development","Worldbuilding","Island rules / lore","Story arcs","Suspense structure","Long-form narrative planning"],url:"#/projects/writing"};
+
+const WEB_SERVICES=[["Business Websites","A professional online presence that explains what you offer and invites enquiries."],["Landing Pages","One focused page built around a single goal."],["Portfolio Websites","A place to present your work and capabilities."],["Personal Brand Websites","A clear home for your name, story, and work."],["Creator Websites","A digital home for your audience and content."],["Startup Websites","A clear first impression for an idea or product."],["Website Redesigns","Keep what works, fix what confuses."]];
+const WRITING_SERVICES=[["Story & Screenwriting","TV shows, web series, screenplays, story development, character development, worldbuilding, thriller, mystery, suspense, psychological storytelling."],["Content","YouTube scripts, hooks, video concepts, ghostwriting, long-form content."],["Marketing Copy","Advertising copy, website copy, creative campaigns, hooks and taglines."]];
+const CREATE_WEB=[["Business Website","A professional online presence for a business."],["Landing Page","A focused page designed around one clear goal."],["Portfolio / Personal Brand","A place to present your work, identity, and capabilities."],["Creator / Startup Website","A clear digital home for an idea, product, or audience."]];
+const CREATE_WRITE=[["Story Concept","Turn an idea into a structured story."],["Character Development","Characters with motivations, conflicts, flaws, and arcs."],["Series Development","Long-form stories, episodes, arcs, and worldbuilding."],["YouTube Script","Hooks, structure, pacing, narrative, and payoff."]];
+const PROCESS=[["Discover","Understand the idea, audience, goals, and requirements."],["Plan","Shape the structure, direction, content, and approach."],["Create","Build the website or develop the written work."],["Refine","Review, polish, and improve the final result."]];
+const WHY=[["The idea comes first","I start by understanding what the project is trying to achieve."],["Clarity over complexity","The work should be easy to understand and easy to use."],["Websites as experiences","A website should guide visitors, not simply display information."],["Writing for attention","Strong writing needs structure, emotion, pacing, and purpose."],["Intentional finish","Details should feel deliberate rather than accidental."]];
+const ABOUT=["My work sits between digital experiences and storytelling. I enjoy taking an idea and turning it into something people can actually experience — whether that's a website that makes a business clear, or a story designed to keep someone watching.","I'm curious, I like solving problems, I keep learning, I sweat the details, and I build projects through to the finish."];
+/* ============ END OF EDITABLE CONTENT ============ */
+
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ph=(i,a)=>`<div class="ph">${i?`<img src="${esc(i)}" alt="${esc(a)}" loading="lazy">`:'[PROJECT IMAGE]'}</div>`;
+const link=(u,t)=>/^(https?:|#)/.test(u)?`<a class="lnk" href="${esc(u)}"${u[0]!=='#'?' target="_blank" rel="noopener"':''}>${t} →</a>`:`<span class="lnk" style="opacity:.5">${t} →</span>`;
+const li=a=>a.map(x=>`<li>${esc(x)}</li>`).join('');
+const dl=(h,a)=>`<div class="dl"><h3>${h}</h3>${a.map(([t,d])=>`<div><b>${esc(t)}</b><p>${esc(d)}</p></div>`).join('')}</div>`;
+const card=p=>`<article class="card">${ph(p.img,p.title+' preview')}<div class="cb"><span class="cat">${esc(p.category)}</span><h3>${esc(p.title)}</h3><p>${esc(p.desc)}</p><p class="mini"><b>Purpose:</b> ${esc(p.objective)}</p><p class="mini"><b>Created:</b> ${esc(p.created)}</p><div class="tags">${p.skills.map(s=>`<span>${esc(s)}</span>`).join('')}</div>${link(p.url,'View Project')}</div></article>`;
+const SLOT={
+ create:()=>`<h2>What I can create.</h2><div class="cr">${dl('Need a website?',CREATE_WEB)}${dl('Have a story or content idea?',CREATE_WRITE)}</div>`,
+ feat:c=>`<article class="feat"><span class="cat">Original Series</span><h3>THE 15<em>Lost in Unknown</em></h3><p class="quote serif">Some worlds are not meant to be found.</p><div class="pills">${THE15.genres.map(g=>`<span>${g}</span>`).join('')}</div><div class="fc"><div><h4>The concept</h4><p>${esc(THE15.concept)}</p></div><div><h4>Developed through</h4><ul>${li(THE15.through)}</ul></div></div>${c?`<a class="btn" href="${THE15.url}">Explore the Project →</a>`:''}</article>`,
+ process:()=>`<div class="steps">${PROCESS.map(([t,d])=>`<div class="step"><h3>${t}</h3><p>${d}</p></div>`).join('')}</div>`,
+ why:()=>`<div class="why">${WHY.map(([t,d])=>`<div><h3>${t}</h3><p>${d}</p></div>`).join('')}</div>`,
+ about:()=>ABOUT.map(t=>`<p>${t}</p>`).join(''),
+ aboutshort:()=>ABOUT.map(t=>`<p>${t}</p>`).join('')+'<a class="lnk" href="#/about">More about me →</a>',
+ band:()=>`<div class="band"><h2 class="h3">Have an idea? Let's build it.</h2><a class="btn p" href="#/contact">Start a Conversation</a></div>`};
+$$('[data-slot]').forEach(e=>e.innerHTML=SLOT[e.dataset.slot](e.dataset.cta));
+$$('.js-selected').forEach(e=>e.innerHTML=PROJECTS.map(card).join(''));
+$('#sites').innerHTML=WEBSITES.map(s=>`<article class="wsite">${ph(s.img,s.name+' website screenshot')}<div><span class="cat">${esc(s.category)}</span><h3>${esc(s.name)}</h3><p><b>The project</b><br>${esc(s.desc)}</p><strong>What I built</strong><ul>${li(s.built)}</ul>${link(s.url,'View Live Website')}</div></article>`).join('');
+$('#samples').innerHTML=WRITING.map(w=>`<article class="sample"><span class="cat">WRITING SAMPLE</span><h3>${esc(w.title)}</h3><p class="mini"><b>Format:</b> ${esc(w.format)} · <b>Genre:</b> ${esc(w.genre)} · <b>My role:</b> ${esc(w.role)}</p><div class="paper">${esc(w.excerpt)}</div>${link(w.url,'Read Sample')}</article>`).join('');
+const acc=a=>a.map(([t,d])=>`<details><summary>${t}</summary><p>${d}</p></details>`).join('');
+$('#wsv').innerHTML=acc(WEB_SERVICES);$('#rsv').innerHTML=acc(WRITING_SERVICES);
+const wa=SITE.whatsapp.replace(/\D/g,''),tel=SITE.phone.replace(/[^\d+]/g,''),mail='mailto:'+SITE.email;
+$('#ct').innerHTML=`<a href="${mail}"><small>Email</small><b>${esc(SITE.email)}</b></a><a href="${/\d{6}/.test(tel)?'tel:'+tel:'#/contact'}"><small>Phone</small><b>${esc(SITE.phone)}</b></a><a href="${wa?'https://wa.me/'+wa:'#/contact'}"${wa?' target="_blank" rel="noopener"':''}><small>WhatsApp</small><b>${wa?'Message me':'WhatsApp'}</b></a>`;
+$('#cta').href=mail;
+if(SITE.hasPhoto&&PHOTO_URL)$('#photo').innerHTML=`<img src="${esc(PHOTO_URL)}" alt="Portrait of Ronak Patel" style="width:100%;height:100%;object-fit:cover">`;
+else{$('#photo').style.display='none';$('#v-about .ab').style.gridTemplateColumns='1fr'}
+
+function tab(t){$$('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));$$('.pane').forEach(p=>p.classList.toggle('on',p.id==='p-'+t))}
+const nl=$('#nl'),bg=$('#bg');
+function route(){const [,v='home',t]=location.hash.split('/');const view=$('#v-'+v)?v:'home';
+ $$('.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+view));
+ $$('.nl a[data-v]').forEach(a=>a.classList.toggle('on',a.dataset.v===view));
+ if(view==='projects')tab(['selected','websites','writing'].includes(t)?t:'selected');
+ nl.classList.remove('o');bg.textContent='☰';bg.setAttribute('aria-expanded',false);scrollTo(0,0);
+ document.title=(view==='home'?'':view[0].toUpperCase()+view.slice(1)+' — ')+'Ronak Patel — Website Builder & Writer'}
+bg.onclick=()=>{const o=nl.classList.toggle('o');bg.setAttribute('aria-expanded',o);bg.textContent=o?'✕':'☰'};
+$$('.tabs button').forEach(b=>b.onclick=()=>tab(b.dataset.t));
+addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
